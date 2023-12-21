@@ -1,0 +1,24 @@
+<h3>List of beast</h3>
+
+<br />
+<div *ngIf="deletedBeast else nothingWasDeleted">
+    <h5>
+        Deleted:
+        <small class="text-danger">{{deletedBeast}}</small>
+    </h5>
+</div>
+<ng-template #nothingWasDeleted>
+    <h5> Noting was deleted. </h5>
+</ng-template>
+<br />
+
+<button *ngIf="beastNames.length > 0" (click)="removeLastBeast()" class="btn btn-outline-danger">
+    Delete last beast
+</button>
+<br />
+
+<ul class="mt-2 list-group">
+    <li *ngFor="let name of beastNames" class="list-group-item">
+        {{name}}
+    </li>
+</ul>
