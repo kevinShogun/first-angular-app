@@ -1,0 +1,22 @@
+<h2 class="text-3xl font-bold text-gray-100" style="font-family: 'Roboto', sans-serif; text-shadow: 2px 0px 2px #055;">
+  Bases</h2>
+<ul class="mr-2 text-gray-50">
+  <li *ngFor="
+            let character of characterList;
+            let i = index;
+            let isLast = last;
+            let isFirst = first;" class="text-gray-50 hover:translate-x-2 transform my-2
+        transition duration-500 ease-in-out cursor-pointer
+        lowercase first-letter:uppercase flex justify-between items-center" [ngClass]="{
+            'text-red-300 font-bold': characterList[i].basePower < 200,
+            'text-green-300 font-bold ':  characterList[i].basePower > 200
+        }">
+    <div>
+      <span class="text-blue-300 font-bold">{{i + 1}}. </span>
+      {{character.name}} - <strong>Power: </strong> {{character.basePower}}
+    </div>
+
+    <button class=" bg-red-300 text-white px-2.5 py-1 rounded-full text-sm"
+      (click)="onDeleteCharacter(character.id || '')">x</button>
+  </li>
+</ul>

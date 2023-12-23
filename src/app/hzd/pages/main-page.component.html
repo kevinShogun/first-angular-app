@@ -1,0 +1,17 @@
+<h1 class="text-4xl text-gray-900 font-bold font-monospace text-center">
+  Main page
+</h1>
+<br />
+<hr />
+<br />
+
+<!-- createa a form layout with a form group and form controls  using tailwindcsss-->
+<div class="max-w-[90w] flex flex-col md:flex-row gap-8 p-3 shadow-lg">
+  <div class="bg-slate-800 w-full md:w-1/2 rounded-lg p-5">
+    <hzd-list [characterList]="characters" (onDeleteId)="onDeleteCharacter($event)"></hzd-list>
+  </div>
+
+  <div class="bg-slate-800 w-full md:w-1/2 rounded-lg p-5">
+    <hzd-add-character (onNewCharacter)="onNewCharacter($event)"></hzd-add-character>
+  </div>
+</div>

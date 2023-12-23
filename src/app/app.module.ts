@@ -3,8 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { CounterModule } from './counter/counter.module';
-import { BeastModule } from './beasts/beast.module';
+import { HzdModule } from './hzd/hzd.module';
 
 @NgModule({
   declarations: [
@@ -13,8 +12,9 @@ import { BeastModule } from './beasts/beast.module';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    CounterModule,
-    BeastModule
+    HzdModule
+    // CounterModule,
+    // BeastModule
   ],
   providers: [],
   bootstrap: [AppComponent]
